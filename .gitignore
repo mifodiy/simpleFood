@@ -1,0 +1,7 @@
+node_modules/
+.DS__Store
+.idea/
+.idea/*
+.vscode
+build/
+npm-debug.*
