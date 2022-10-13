@@ -1,29 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Roboto+Slab:wght@400;700&display=swap"
-    rel="stylesheet">
+  <title>Simple food</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <div class="wrapper">
+
     <header class="header">
-      
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="39">
+          </a>
+          <nav class="menu">
+
+
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Блюда</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header__btns">
+            <li class="header__item">
+              <button class="header__btn" style="background-image: url('images/search-icon.svg');"><span class="sr-only">Кнопка поиска</span></button>
+            </li>
+            <li class="header__item header__item--cart">
+              <button class="header__btn" style="background-image: url('images/cart-icon.svg');"><span class="sr-only">Кнопка корзины</span></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </header>
 
     <main class="main">
-      
+      <section class="top section">
+        <div class="container">
+          <div class="top__inner">
+            <div class="top__content">
+              <h1 class="top__title">Доставка
+                <span>за 15 минут</span>
+              </h1>
+              <div class="top__text">
+                <p>Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт</p>
+              </div>
+              <button class="top__btn btn">Заказать</button>
+              <a class="top__link" href="#">Подробнее</a>
+            </div>
+            <img class="top__img" src="images/top-bg.png" alt="доставщик" width="560" height="660">
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer class="footer">
-      
+
     </footer>
   </div>
 

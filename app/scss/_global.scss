@@ -3,6 +3,14 @@ body {
 	height: 100%;
 }
 
+body{
+	@extend %rubik-regular;
+	font-size: 20px;
+	line-height: 1.5;
+	color: $dark;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0.38) 100%);
+}
+
 
 .wrapper {
 	display: flex;
@@ -10,9 +18,43 @@ body {
 	min-height: 100%;
 }
 
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .main {
 	flex: 1 0 auto;
 }
+
+.section{
+	margin-bottom: 120px;
+}
+
+.btn{
+	background-color: $orange;
+	color: #fff;
+	padding: 12px 32px;
+	border-radius: 6px;
+	font-size: 18px;
+	line-height: 1.3;
+	letter-spacing: 0.03em;
+}
+
 .footer {
 	flex: 0 0 auto;
 }
