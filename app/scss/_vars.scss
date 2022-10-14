@@ -26,3 +26,14 @@ $dark: #31352B;
   font-family: "Rubik-Medium", Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
+
+%under-line{
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $darkBlue;
+}
