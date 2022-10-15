@@ -3,13 +3,12 @@ body {
 	height: 100%;
 }
 
-body{
+body {
 	@extend %rubik-regular;
 	font-size: 20px;
 	line-height: 1.5;
 	color: $dark;
-	background-color: $silver-100
-	//background: linear-gradient(180deg, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0.38) 100%);
+	background-color: $silver-100;
 }
 
 
@@ -26,46 +25,45 @@ body{
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
-
-
 
 .main {
 	flex: 1 0 auto;
 }
 
-.section{
+.section {
 	margin-bottom: 120px;
 }
 
-.logo{
+.logo {
 	transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	outline: 0;
-	&:focus{
+
+	&:focus {
 		box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
 		border-radius: 5px;
 	}
 
-	&:hover{
+	&:hover {
 		opacity: 0.8;
 	}
 
-	&:active{
+	&:active {
 		opacity: 0.5;
 	}
 }
 
-.btn{
+.btn {
 	background-color: $orange;
 	color: #fff;
 	padding: 12px 32px;
@@ -76,35 +74,35 @@ body{
 	outline: 0;
 	transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
 
-	&:focus{
+	&:focus {
 		background-color: rgba(255, 122, 80, 0.1);
 		box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
 		border-radius: 5px;
 		color: $orange;
 	}
 
-	&:hover{
+	&:hover {
 		background: rgba(255, 255, 255, 0.1);
 		box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2), 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
 		border-radius: 5px;
 		color: $orange;
 	}
 
-	&:active{
+	&:active {
 		background-color: rgba(255, 122, 80, 0.1);
 		border-radius: 5px;
 		color: $orange;
 	}
 }
 
-.title{
+.title {
 	@extend %rubik-medium;
 	font-size: 36px;
 	line-height: 1.3;
 	color: $darkBlue;
 }
 
-.product-card{
+.product-card {
 	width: 210px;
 	padding: 20px 15px;
 	display: flex;
@@ -116,24 +114,24 @@ body{
 	border-radius: 5px;
 	transition: box-shadow 0.5s ease-in-out;
 
-	&:hover{
+	&:hover {
 		box-shadow: 0px 0px 0px 1px #FF6838;
 		border-radius: 5px;
 	}
 
-	&__link{
+	&__link {
 		margin-bottom: 10px;
 		outline: 0;
 	}
 
-	&__descr{
+	&__descr {
 		font-size: 15px;
 		line-height: 1.2;
 		text-align: center;
 		margin-bottom: 10px;
 	}
 
-	&__price{
+	&__price {
 		@extend %rubik-medium;
 		font-size: 15px;
 		line-height: 1.4;
@@ -141,7 +139,7 @@ body{
 		margin-bottom: 10px;
 	}
 
-	&__info{
+	&__info {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -149,48 +147,50 @@ body{
 		flex-grow: 1;
 	}
 
-	&__btn{
+	&__btn {
 		font-size: 14px;
 		padding: 7px 16px;
 		outline: 0;
 	}
 }
 
-.more-btn{
+.more-btn {
 	display: block;
 	margin: 0 auto;
 	position: relative;
-	&::before{
+
+	&::before {
 		@extend %under-line;
 		bottom: 5px;
 	}
 
-	&:focus{
+	&:focus {
 		box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
 		border-radius: 5px;
 
-		&::before{
+		&::before {
 			opacity: 0;
 		}
 	}
 
-	&:hover{
+	&:hover {
 		color: $orange;
 
-		&::before{
+		&::before {
 			opacity: 0;
 		}
 	}
 
-	&:active{
+	&:active {
 		text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
-		&::before{
+
+		&::before {
 			opacity: 0;
 		}
 	}
 }
 
-.input{
+.input {
 	padding: 12px 15px;
 	background-color: #FFFFFF;
 	border: 1px solid $gray;
@@ -198,7 +198,7 @@ body{
 	font-size: 14px;
 	line-height: 1.3;
 
-	&::placeholder{
+	&::placeholder {
 		@extend %rubik-regular;
 		font-size: 14px;
 		line-height: 1.3;
@@ -207,16 +207,16 @@ body{
 	}
 }
 
-.contacts{
+.contacts {
 	font-style: normal;
 
-	&__list{
+	&__list {
 		font-size: 16px;
 		line-height: 2;
 		color: $dark;
 	}
 
-	&__item{
+	&__item {
 		margin-bottom: 15px;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -224,31 +224,27 @@ body{
 		background-position: left center;
 	}
 
-	&__link{
+	&__link {
 		padding-left: 31px;
 		outline: 0;
 	}
 }
 
-.social{
+.social {
 	display: flex;
 
-	&__item{
-		// width: 39px;
-		// height: 39px;
-		// border-radius: 50%;
-		// background-color: $silver-200;
+	&__item {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		outline: 0;
 
-		&:not(:last-child){
+		&:not(:last-child) {
 			margin-right: 13px;
 		}
 	}
 
-	&__link{
+	&__link {
 		height: 39px;
 		width: 39px;
 		border-radius: 50%;
@@ -257,28 +253,30 @@ body{
 		outline: 0;
 		position: relative;
 		transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, filter 0.5s ease-in-out;
-		
-		&:focus{
+
+		&:focus {
 			background-color: #FFF2ED;
 			box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
 		}
 
-		&:hover{
+		&:hover {
 			background-color: #FF7A50;
-			&::before{
+
+			&::before {
 				@extend %blackToWhite;
 			}
 		}
 
-		&:active{
+		&:active {
 			background-color: #FFF2ED;
-			&::before{
+
+			&::before {
 				@extend %blackToOrange;
 			}
 		}
 	}
 
-	&__link::before{
+	&__link::before {
 		content: '';
 		position: absolute;
 		top: 50%;
@@ -293,15 +291,15 @@ body{
 		@extend %blackToDark;
 	}
 
-	&__link--facebook::before{
+	&__link--facebook::before {
 		background-image: url('../images/sprite.svg#facebook');
 	}
 
-	&__link--twitter::before{
+	&__link--twitter::before {
 		background-image: url('../images/sprite.svg#twitter');
 	}
 
-	&__link--instagram::before{
+	&__link--instagram::before {
 		background-image: url('../images/sprite.svg#instagram');
 	}
 }
@@ -309,13 +307,3 @@ body{
 .footer {
 	flex: 0 0 auto;
 }
-
-
-
-
-
-
-
-
-
-
