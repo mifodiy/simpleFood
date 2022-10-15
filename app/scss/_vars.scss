@@ -27,7 +27,7 @@ $dark: #31352B;
   font-weight: 500;
 }
 
-%under-line{
+%under-line {
   content: '';
   position: absolute;
   bottom: 2px;
@@ -39,14 +39,14 @@ $dark: #31352B;
   transition: opacity 0.5s ease-in-out;
 }
 
-%blackToWhite{
+%blackToWhite {
   filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%);
 }
 
-%blackToDark{
+%blackToDark {
   filter: invert(19%) sepia(42%) saturate(459%) hue-rotate(198deg) brightness(95%) contrast(91%);
 }
 
-%blackToOrange{
+%blackToOrange {
   filter: invert(64%) sepia(39%) saturate(5886%) hue-rotate(334deg) brightness(97%) contrast(108%);
 }
