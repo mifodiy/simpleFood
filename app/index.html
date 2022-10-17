@@ -244,6 +244,140 @@
 
         </div>
       </section>
+
+      <section class="benefits section">
+        <div class="container">
+          <div class="benefits__inner">
+            <img class="benefits__img" src="images/benefits-bg.png" alt="Быстрая доставка" width="440" height="585">
+            <div class="benefits__content">
+              <h2 class="benefits__title title">Оставайтесь дома,
+                а мы позаботимся о еде</h2>
+              <div class="benefits__text">
+                <p>У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь нашей доставкой прямо
+                  сейчас и получите скиидку!</p>
+              </div>
+              <ul class="benefits__list">
+                <li class="benefits__item" style="background-image: url('images/sprite.svg#timer');">Быстрая доставка за
+                  15 минут</li>
+                <li class="benefits__item" style="background-image: url('images/sprite.svg#delivery');">Вежливые курьеры
+                </li>
+                <li class="benefits__item" style="background-image: url('images/sprite.svg#resturent');">Более 500
+                  заведений</li>
+              </ul>
+              <a class="benefits__link btn" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="restaurants section">
+        <div class="container">
+          <h2 class="restaurants__title title">
+            Лучшие рестораны
+          </h2>
+
+          <ul class="restaurants__list">
+            <li class="restaurants__item">
+              <div class="restaurant-card">
+                <a class="restaurant-card__image" href="#">
+                  <img class="restaurant-card__img" src="images/restaurant/1.jpg" alt="ресторан №1" width="370" height="300">
+                </a>
+                <a class="restaurant-card__title" href="#">
+                  <h3>Blaze Pizza</h3>
+                </a>
+                <div class="restaurant-card__bottom">
+                  <span class="restaurant-card__time">11:00 - 22:00</span>
+                  <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Перейти к ресторану</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          
+            <li class="restaurants__item">
+              <div class="restaurant-card">
+                <a class="restaurant-card__image" href="#">
+                  <img class="restaurant-card__img" src="images/restaurant/2.jpg" alt="ресторан №2" width="370" height="300">
+                </a>
+                <a class="restaurant-card__title" href="#">
+                  <h3>Pizza Runcho</h3>
+                </a>
+                <div class="restaurant-card__bottom">
+                  <span class="restaurant-card__time">12:00 - 21:00</span>
+                  <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Перейти к ресторану</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="restaurants__item">
+              <div class="restaurant-card">
+                <a class="restaurant-card__image" href="#">
+                  <img class="restaurant-card__img" src="images/restaurant/3.jpg" alt="ресторан №3" width="370" height="300">
+                </a>
+                <a class="restaurant-card__title" href="#">
+                  <h3>Pizza Hut</h3>
+                </a>
+                <div class="restaurant-card__bottom">
+                  <span class="restaurant-card__time">11:00 - 22:00</span>
+                  <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Перейти к ресторану</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="restaurants__item">
+              <div class="restaurant-card">
+                <a class="restaurant-card__image" href="#">
+                  <img class="restaurant-card__img" src="images/restaurant/4.jpg" alt="ресторан №4" width="370" height="300">
+                </a>
+                <a class="restaurant-card__title" href="#">
+                  <h3>McDonald`s</h3>
+                </a>
+                <div class="restaurant-card__bottom">
+                  <span class="restaurant-card__time">06:00 - 23:00</span>
+                  <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Перейти к ресторану</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="restaurants__item">
+              <div class="restaurant-card">
+                <a class="restaurant-card__image" href="#">
+                  <img class="restaurant-card__img" src="images/restaurant/5.jpg" alt="ресторан №5" width="370" height="300">
+                </a>
+                <a class="restaurant-card__title" href="#">
+                  <h3>KFC</h3>
+                </a>
+                <div class="restaurant-card__bottom">
+                  <span class="restaurant-card__time">06:00 - 23:30</span>
+                  <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Перейти к ресторану</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="restaurants__item">
+              <div class="restaurant-card">
+                <a class="restaurant-card__image" href="#">
+                  <img class="restaurant-card__img" src="images/restaurant/6.jpg" alt="ресторан №6" width="370" height="300">
+                </a>
+                <a class="restaurant-card__title" href="#">
+                  <h3>Star Burgers</h3>
+                </a>
+                <div class="restaurant-card__bottom">
+                  <span class="restaurant-card__time">09:00 - 21:00</span>
+                  <a class="restaurant-card__link" href="#">
+                    <span class="sr-only">Перейти к ресторану</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -255,8 +389,12 @@
             <a class="footer__logo logo" href="#">
               <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="39">
             </a>
-            <label for="subscribe"><input class="footer__input input" type="email" name="subscribe" id="subscribe" placeholder="Ваш email"></label>
-            <button class="footer__btn btn" type="submit">Подписаться</button>
+
+            <form class="footer__form" action="#">
+              <label for="subscribe"><input class="footer__input input" type="email" name="subscribe" id="subscribe"
+                  placeholder="Ваш email"></label>
+              <button class="footer__btn btn" type="submit">Подписаться</button>
+            </form>
           </div>
 
           <ul class="footer__list">
@@ -320,11 +458,13 @@
               </li>
 
               <li class="contacts__item" style="background-image: url('images/sprite.svg#calling');">
-                <a class="contacts__link" href="tel:380501112233"><span class="sr-only">Наш телефон</span>380501112233</a>
+                <a class="contacts__link" href="tel:380501112233"><span class="sr-only">Наш
+                    телефон</span>380501112233</a>
               </li>
 
               <li class="contacts__item" style="background-image: url('images/sprite.svg#message');">
-                <a class="contacts__link" href="mailto:support@sfood.com"><span class="sr-only">Наш email</span>support@sfood.com</a>
+                <a class="contacts__link" href="mailto:support@sfood.com"><span class="sr-only">Наш
+                    email</span>support@sfood.com</a>
               </li>
 
             </ul>
@@ -337,11 +477,13 @@
               </li>
 
               <li class="social__item">
-                <a class="social__link social__link--twitter" href="#"><span class="sr-only">twitter страничка</span></a>
+                <a class="social__link social__link--twitter" href="#"><span class="sr-only">twitter
+                    страничка</span></a>
               </li>
 
               <li class="social__item">
-                <a class="social__link social__link--instagram" href="#"><span class="sr-only">instagram страничка</span></a>
+                <a class="social__link social__link--instagram" href="#"><span class="sr-only">instagram
+                    страничка</span></a>
               </li>
 
             </ul>
