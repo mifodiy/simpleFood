@@ -6,27 +6,6 @@ $darkBlue: #363853;
 $dark: #31352B;
 
 
-%rubik-light {
-  font-family: "Rubik-Light", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-}
-
-%rubik-regular {
-  font-family: "Rubik-Regular", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-}
-
-%rubik-italic {
-  font-family: "Rubik-Italic", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-%rubik-medium {
-  font-family: "Rubik-Medium", Arial, Helvetica, sans-serif;
-  font-weight: 500;
-}
-
 %under-line {
   content: '';
   position: absolute;
@@ -49,4 +28,11 @@ $dark: #31352B;
 
 %blackToOrange {
   filter: invert(64%) sepia(39%) saturate(5886%) hue-rotate(334deg) brightness(97%) contrast(108%);
+}
+
+@function max($numbers...) {
+ @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+ @return m#{i}n(#{$numbers});
 }
