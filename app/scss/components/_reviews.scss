@@ -1,0 +1,183 @@
+.reviews {
+
+  &__title {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  &__slider {
+    max-width: 990px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 75px;
+  }
+
+  &__item {
+    display: flex;
+    max-width: 990px;
+    align-items: flex-start;
+  }
+
+  &__img {
+    border-radius: 50%;
+    margin-right: 40px;
+  }
+
+  &__content {
+    padding: 30px 0 0 40px;
+  }
+
+  &__blockquote {
+    max-width: 610px;
+    font-style: italic;
+    padding-right: 40px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 19px;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+      background-color: $gray;
+    }
+
+    &::after {
+      mask-image: url('../images/sprite.svg#quote-open');
+      top: 0;
+      left: -40px;
+    }
+
+    &::before {
+      mask-image: url('../images/sprite.svg#quote-close');
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    color: $orange;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  &__status {
+    font-size: 14px;
+    line-height: 1.3;
+    display: block;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid $orange;
+    transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+    outline: 0;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px rgba($orange, 0.7);
+    }
+
+    &:hover {
+      background-color: rgba($orange, 0.1);
+      border-color: #FFAE94;
+
+      .icon-arrow {
+        background-color: #FFAE94;
+      }
+    }
+
+    &:active {
+      background-color: rgba($orange, 0.1);
+      border: none;
+
+      .icon-arrow {
+        background-color: $orange;
+      }
+    }
+
+    &.slick-disabled{
+      border-color: $gray;
+
+      .icon-arrow{
+        background-color: $gray;
+      }
+    }
+  }
+
+  .slick-prev {
+    transform: translateX(-115px);
+  }
+
+  .slick-next {
+    transform: translateX(75px);
+  }
+
+  .icon-arrow {
+    width: 18px;
+    height: 18px;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    background-color: $orange;
+    display: block;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    bottom: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    button {
+      font-size: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $gray;
+      transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+      outline: 0;
+
+      &:focus {
+        box-shadow: 0px 0px 0px 2px $orange;
+        background-color: $gray;
+      }
+
+      &:hover {
+        background-color: rgba($orange, 0.1);
+        box-shadow: 0px 0px 0px 2px rgba($orange, 0.7);
+      }
+
+      &:active {
+        background-color: #FFAE94;
+      }
+    }
+  }
+
+  .slick-active {
+    button {
+      background-color: $orange;
+    }
+  }
+
+}

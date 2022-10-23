@@ -6,29 +6,18 @@ $darkBlue: #363853;
 $dark: #31352B;
 
 
-%under-line {
+@mixin under-line($height:1px, $color:$darkBlue) {
   content: '';
   position: absolute;
   bottom: 2px;
   left: 0;
   right: 0;
   width: 100%;
-  height: 1px;
-  background-color: $darkBlue;
+  height: $height;
+  background-color: $color;
   transition: opacity 0.5s ease-in-out;
 }
 
-%blackToWhite {
-  filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%);
-}
-
-%blackToDark {
-  filter: invert(19%) sepia(42%) saturate(459%) hue-rotate(198deg) brightness(95%) contrast(91%);
-}
-
-%blackToOrange {
-  filter: invert(64%) sepia(39%) saturate(5886%) hue-rotate(334deg) brightness(97%) contrast(108%);
-}
 
 @function max($numbers...) {
  @return m#{a}x(#{$numbers});
