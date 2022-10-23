@@ -1,0 +1,134 @@
+.header {
+  padding: 58px 0;
+
+  &__logo {
+    margin-left: 5px;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    margin: 0 52px 0 auto;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  &__link {
+    outline: 0;
+    transition: box-shadow 0.5s ease-in-out, color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px rgba($orange, 0.7);
+      border-radius: 5px;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba($dark, 0.5);
+    }
+
+    &--active {
+      color: $orange;
+    }
+  }
+
+}
+
+.navigation {
+  display: flex;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__btn {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    outline: 0;
+    border-radius: 5px;
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+    &::before {
+      width: 19px;
+      height: 19px;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+      background-color: $dark;
+      transition: background-color 0.5s ease-in-out;
+    }
+
+    &--search {
+      &::before {
+        mask-image: url(../images/sprite.svg#search);
+      }
+
+    }
+
+    &--cart {
+      &::before {
+        mask-image: url(../images/sprite.svg#cart);
+      }
+    }
+
+    &:focus {
+      background-color: rgba($orange, 0.1);
+      box-shadow: 0px 0px 0px 2px rgba($orange, 0.7);
+    }
+
+    &:hover {
+      background-color: $orange;
+
+      &::before {
+        background-color: #fff;
+      }
+
+      & .navigation__num {
+        background-color: #fff;
+        color: $orange;
+      }
+    }
+
+    &:active {
+      background-color: rgba($orange, 0.1);
+    }
+
+  }
+
+  &__num {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $orange;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    line-height: 14px;
+    top: 7px;
+    right: 7px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  }
+}
