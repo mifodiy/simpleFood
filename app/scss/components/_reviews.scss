@@ -70,8 +70,8 @@
     &::after,
     &::before {
       @include pseudo;
-      width: 24px;
-      height: 19px;
+      width: 33px;
+      height: 24px;
       mask-repeat: no-repeat;
       mask-size: contain;
       mask-position: center;
@@ -86,7 +86,7 @@
     &::after {
       mask-image: url('../images/sprite.svg#quote-open');
       top: 0;
-      left: -40px;
+      left: -44px;
 
       @include mq('phone'){
         top: -10px;
@@ -95,8 +95,8 @@
 
     &::before {
       mask-image: url('../images/sprite.svg#quote-close');
-      right: 0;
-      bottom: 0;
+      right: -3px;
+      bottom: -3px;
 
       @include mq('phone'){
         bottom: 10px;
@@ -136,6 +136,7 @@
     border: 3px solid $orange;
     transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
     outline: 0;
+    z-index: 5;
 
     @include mq('phone'){
       top: 28px;

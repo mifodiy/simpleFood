@@ -257,6 +257,7 @@
     width: 100%;
     padding: 25px 15px;
     margin-bottom: 15px;
+    display: block;
   }
 
   .menu__item:not(:last-child){
@@ -271,6 +272,7 @@
     transform: translateX(0);
   }
 
+  
   
 }
 
