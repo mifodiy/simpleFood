@@ -5,6 +5,10 @@
 	outline: 0;
 	transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 
+	@include mq('phone'){
+		font-size: 20px;
+	}
+
 	&::before {
 		@include under-line;
 		bottom: 5px;

@@ -1,8 +1,24 @@
 .header {
   padding: 58px 0;
+  position: relative;
+
+  @include mq('phone'){
+    padding: 14px 0;
+  }
 
   &__logo {
     margin-left: 5px;
+
+    @include mq('phone'){
+      margin-left: 0;
+    }
+
+    .logo__img{
+      @include mq('phone'){
+        width: 115px;
+        height: 23px;
+      }
+    }
   }
 }
 
@@ -16,6 +32,10 @@
     margin: 0 52px 0 auto;
     font-size: 18px;
     line-height: 1.2;
+
+    @include mq('tablet'){
+      display: none;
+    }
   }
 
   &__item:not(:last-child) {
@@ -44,10 +64,61 @@
     }
   }
 
+  &__btn {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    margin: 0 7px 0 20px;
+    display: none;
+
+    @include mq ('tablet') {
+      display: block;
+    }
+
+    @include mq('phone'){
+      margin-left: 16px;
+    }
+
+  
+  }
+  
+  &__btn::after,
+  &__btn::before {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: $darkBlue;
+    display: block;
+    margin-bottom: 8px;
+    transition: transform .3s;
+  }
+  
+  &__btn::after {
+    margin-bottom: 0;
+  }
+  
+  &__line {
+    background-color: $darkBlue;
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 8px;
+    opacity: 1;
+    transition: opacity .6s;
+  }
+
 }
 
 .navigation {
   display: flex;
+
+  @include mq('tablet'){
+    margin-left: auto;
+  }
 
   &__item {
     position: relative;
@@ -66,10 +137,9 @@
     transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 
     &::before {
+      @include pseudo;
       width: 19px;
       height: 19px;
-      content: '';
-      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -130,5 +200,77 @@
     top: 7px;
     right: 7px;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
+    @include mq('phone'){
+      top: 8px;
+      right: 4px;
+    }
   }
 }
+
+.side-menu{
+  position: absolute;
+  background-color: #fff;
+  width: 300px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateX(-200%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 10;
+  
+  &__logo{
+    display: inline-block;
+    margin: 25px 0 25px 15px;
+  }
+
+  &__btn{
+    position: absolute;
+    top: 45px;
+    right: 26px;
+    &::after,
+    &::before {
+      content: '';
+      width: 25px;
+      height: 2px;
+      background-color: $darkBlue;
+      display: block;
+      margin-bottom: 8px;
+      border-radius: 2px;
+      transition: transform .3s;
+    } 
+
+    &::after {
+      margin-bottom: 0;
+      transform: translateY(-10px) rotate(-135deg);
+    }
+
+    &::before {
+      transform: translateY(0) rotate(135deg);
+    }
+  }
+
+  .menu__list{
+    flex-direction: column;
+    border-top: 1px solid #EEEFF3;
+    border-bottom: 1px solid #EEEFF3;
+    width: 100%;
+    padding: 25px 15px;
+    margin-bottom: 15px;
+  }
+
+  .menu__item:not(:last-child){
+    margin-bottom: 20px;
+  }
+
+  .contacts{
+    padding-left: 15px;
+  }
+
+  &--active{
+    transform: translateX(0);
+  }
+
+  
+}
+

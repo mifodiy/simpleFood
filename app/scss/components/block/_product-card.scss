@@ -11,6 +11,11 @@
 	border-radius: 5px;
 	transition: box-shadow 0.5s ease-in-out;
 
+	@include mq('phone'){
+		width: 170px;
+		min-height: 299px;
+	}
+
 	&:hover {
 		box-shadow: 0px 0px 0px 1px $orange;
 		border-radius: 5px;

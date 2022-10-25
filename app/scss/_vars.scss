@@ -5,10 +5,39 @@ $gray: #C2C2C2;
 $darkBlue: #363853;
 $dark: #31352B;
 
+$breakpoints: (
+  "phone": 560px,
+  "tablet": 768px,
+  "tablet-2": 992px,
+  "desktop": 1230px
+);
+
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+   $width: map_get($breakpoints, $width);
+   @if $type == max {
+    $width: $width - 1px;
+   }
+   @media only screen and (#{$type}-width: $width) {
+    @content;
+   }
+  }
+}
+
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+   }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
 
 @mixin under-line($height:1px, $color:$darkBlue) {
-  content: '';
-  position: absolute;
+  @include pseudo;
   bottom: 2px;
   left: 0;
   right: 0;
@@ -18,6 +47,12 @@ $dark: #31352B;
   transition: opacity 0.5s ease-in-out;
 }
 
+@mixin push--auto {
+  margin: {
+   left: auto;
+   right: auto;
+  }
+}
 
 @function max($numbers...) {
  @return m#{a}x(#{$numbers});
