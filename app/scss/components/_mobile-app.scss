@@ -8,16 +8,34 @@
 		background-repeat: no-repeat;
 		background-size: 570px 380px;
 		background-position: center right;
+
+		@include mq('desktop'){
+			background-image: none !important;
+			min-height: auto;
+		}
 	}
 
 	&__title {
 		max-width: 540px;
 		margin-bottom: 45px;
+
+		@include mq('tablet'){
+			margin-bottom: 30px;
+		}
+
+		@include mq('phone'){
+			margin-bottom: 14px;
+		}
 	}
 
 	&__text {
 		max-width: 540px;
 		margin-bottom: 20px;
+
+		@include mq('phone'){
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
 
 		p {
 			margin-bottom: 10px;

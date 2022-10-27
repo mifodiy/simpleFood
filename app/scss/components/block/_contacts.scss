@@ -19,8 +19,7 @@
 		transition: box-shadow 0.5s ease-in-out, color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
 
 		&::before {
-			content: '';
-			position: absolute;
+			@include pseudo;
 			mask-repeat: no-repeat;
 			mask-position: center;
 			mask-size: contain;
