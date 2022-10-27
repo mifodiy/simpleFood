@@ -7,31 +7,31 @@
   z-index: 10;
   transition: transform 0.5s ease-in-out;
 
-  @include mq('phone'){
+  @include mq('phone') {
     padding: 14px 0;
   }
 
   &__logo {
     margin-left: 5px;
 
-    @include mq('phone'){
+    @include mq('phone') {
       margin-left: 0;
     }
 
-    .logo__img{
-      @include mq('phone'){
+    .logo__img {
+      @include mq('phone') {
         width: 115px;
         height: 23px;
       }
     }
   }
 
-  &.sticky{
+  &.sticky {
     padding-bottom: 14px;
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
     transform: translateY(-43px);
 
-    @include mq('phone'){
+    @include mq('phone') {
       transform: translateY(0);
       padding-top: 14px;
     }
@@ -49,7 +49,7 @@
     font-size: 18px;
     line-height: 1.2;
 
-    @include mq('tablet'){
+    @include mq('tablet') {
       display: none;
     }
   }
@@ -95,13 +95,13 @@
       display: block;
     }
 
-    @include mq('phone'){
+    @include mq('phone') {
       margin-left: 16px;
     }
 
-  
+
   }
-  
+
   &__btn::after,
   &__btn::before {
     content: '';
@@ -112,11 +112,11 @@
     margin-bottom: 8px;
     transition: transform .3s;
   }
-  
+
   &__btn::after {
     margin-bottom: 0;
   }
-  
+
   &__line {
     background-color: $darkBlue;
     display: block;
@@ -132,7 +132,7 @@
 .navigation {
   display: flex;
 
-  @include mq('tablet'){
+  @include mq('tablet') {
     margin-left: auto;
   }
 
@@ -217,14 +217,14 @@
     right: 7px;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 
-    @include mq('phone'){
+    @include mq('phone') {
       top: 8px;
       right: 4px;
     }
   }
 }
 
-.side-menu{
+.side-menu {
   position: absolute;
   background-color: #fff;
   width: 300px;
@@ -234,16 +234,17 @@
   transform: translateX(-200%);
   transition: transform 0.5s ease-in-out;
   z-index: 10;
-  
-  &__logo{
+
+  &__logo {
     display: inline-block;
     margin: 25px 0 25px 15px;
   }
 
-  &__btn{
+  &__btn {
     position: absolute;
     top: 45px;
     right: 26px;
+
     &::after,
     &::before {
       content: '';
@@ -254,7 +255,7 @@
       margin-bottom: 8px;
       border-radius: 2px;
       transition: transform .3s;
-    } 
+    }
 
     &::after {
       margin-bottom: 0;
@@ -266,7 +267,7 @@
     }
   }
 
-  .menu__list{
+  .menu__list {
     flex-direction: column;
     border-top: 1px solid #EEEFF3;
     border-bottom: 1px solid #EEEFF3;
@@ -276,21 +277,19 @@
     display: block;
   }
 
-  .menu__item:not(:last-child){
+  .menu__item:not(:last-child) {
     margin-bottom: 20px;
   }
 
-  .contacts{
+  .contacts {
     padding-left: 15px;
   }
 
-  &--active{
+  &--active {
     transform: translateX(0);
   }
 
 
-  
-  
+
+
 }
-
-

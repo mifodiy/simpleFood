@@ -5,7 +5,6 @@
     justify-content: flex-end;
     align-items: center;
     max-width: 1030px;
-    min-height: 585px;
     background-repeat: no-repeat;
     background-size: 440px 585px;
     background-position: center left;
@@ -24,6 +23,11 @@
   &__content {
     max-width: 470px;
     flex-basis: 470px;
+    padding: 58px 0;
+
+    @include mq('phone'){
+      padding: 23px 0;
+    }
   }
 
   &__title {
