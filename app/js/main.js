@@ -18,12 +18,12 @@ $(function () {
 
   if (window.matchMedia("(max-width: 767px)").matches) {
     sliderOn.classList.add('restaurants__slider');
-  }else{
+  } else {
     sliderOn.classList.remove('restaurants__slider');
   }
 
   $('.reviews__slider').slick({
-    dots:true,
+    dots: true,
     prevArrow: `<button type="button" class="slick-prev"><span class="icon-arrow" style="-webkit-mask-image: url('../images/sprite.svg#left-arrow');"></span></button>`,
     nextArrow: `<button type="button" class="slick-next"><span class="icon-arrow" style="-webkit-mask-image: url('../images/sprite.svg#right-arrow');"></span></button>`,
     infinite: false,
@@ -38,10 +38,23 @@ $(function () {
   })
 
   $('.restaurants__slider').slick({
-    dots:true,
+    dots: true,
     arrows: false,
     infinite: false,
   })
+
+
+  var header = $(".header");
+  var scrollChange = 50;
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= scrollChange) {
+      header.addClass('sticky');
+    } else {
+      header.removeClass("sticky");
+    }
+  });
 
   var mixer = mixitup('.categories__list');
   mixer.filter('.burger');

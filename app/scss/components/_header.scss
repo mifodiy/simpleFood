@@ -1,6 +1,11 @@
 .header {
   padding: 58px 0;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: $silver-100;
+  z-index: 10;
+  transition: transform 0.5s ease-in-out;
 
   @include mq('phone'){
     padding: 14px 0;
@@ -18,6 +23,17 @@
         width: 115px;
         height: 23px;
       }
+    }
+  }
+
+  &.sticky{
+    padding-bottom: 14px;
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+    transform: translateY(-43px);
+
+    @include mq('phone'){
+      transform: translateY(0);
+      padding-top: 14px;
     }
   }
 }
@@ -272,7 +288,9 @@
     transform: translateX(0);
   }
 
+
   
   
 }
+
 
