@@ -1,0 +1,35 @@
+.breadcrumbs{
+  background-color: rgba($orange, 0.1);
+
+  &__list{
+    display: flex;
+  }
+
+  &__item{
+    padding: 24px 0;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #505050;
+    position: relative;
+
+    &:not(:last-child){
+      margin-right: 17px;
+
+      &::after{
+        @include pseudo;
+        background-image: url('../../../images/chevron.svg');
+        background-repeat: no-repeat;
+        width: 6px;
+        height: 10px;
+        top: 50%;
+        right: -11px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__link{
+    color: inherit;
+  }
+}

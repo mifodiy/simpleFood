@@ -13,12 +13,7 @@
     }
 
     @include mq('tablet'){
-      height: 450px;
       background-size: contain;
-    }
-
-    @include mq('phone'){
-      height: 300px;
     }
   }
 
