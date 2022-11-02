@@ -4,7 +4,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		min-height: 380px;
 		background-repeat: no-repeat;
 		background-size: 570px 380px;
 		background-position: center right;
@@ -12,6 +11,14 @@
 		@include mq('desktop'){
 			background-image: none !important;
 			min-height: auto;
+		}
+	}
+
+	&__content{
+		padding: 40px 0;
+
+		@include mq('phone'){
+			padding: 2px 0;
 		}
 	}
 
