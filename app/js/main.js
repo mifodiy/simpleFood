@@ -1,5 +1,17 @@
 $(function () {
 
+   var header = $(".header");
+  var scrollChange = 50;
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= scrollChange) {
+      header.addClass('sticky');
+    } else {
+      header.removeClass("sticky");
+    }
+  });
+
   var $range = $(".price__range-slider"),
     $inputFrom = $(".price__input--from"),
     $inputTo = $(".price__input--to"),
@@ -63,7 +75,11 @@ $inputTo.on("input", function () {
   const closeMenu = document.querySelector('.side-menu__btn');
   const mobileMenu = document.querySelector('.side-menu');
   const bodyLock = document.querySelector('body');
-  const sliderOn = document.querySelector('.restaurants__list');
+  const restSliderOn = document.querySelector('.restaurants__list');
+  const promoSliderOn = document.querySelector('.promo__list');
+  const sideBarOn = document.querySelector('.catalog__btn');
+  const closeSideBar = document.querySelector('.catalog-sidebar__btn');
+  const sideBar = document.querySelector('.catalog-sidebar');
 
   burger.addEventListener('click', () => {
     mobileMenu.classList.add('side-menu--active');
@@ -75,11 +91,17 @@ $inputTo.on("input", function () {
     bodyLock.classList.remove('lock');
   });
 
-  if (window.matchMedia("(max-width: 767px)").matches) {
-    sliderOn.classList.add('restaurants__slider');
-  } else {
-    sliderOn.classList.remove('restaurants__slider');
-  }
+  sideBarOn.addEventListener('click', () => {
+    sideBar.classList.add('catalog-sidebar--active');
+    bodyLock.classList.add('lock');
+  });
+
+  closeSideBar.addEventListener('click', () => {
+    sideBar.classList.remove('catalog-sidebar--active');
+    bodyLock.classList.remove('lock');
+  });
+
+  
 
   $('.reviews__slider').slick({
     dots: true,
@@ -96,25 +118,45 @@ $inputTo.on("input", function () {
     ]
   })
 
+
+
+  
+ 
+  if (window.matchMedia("(max-width: 767px)").matches) {
+
+    if(restSliderOn != null){
+      restSliderOn.classList.add('restaurants__slider');
+    }
+
+    if(promoSliderOn != null){
+      promoSliderOn.classList.add('promo__slider');
+    }
+    
+  } else {
+
+    if(restSliderOn != null){
+      restSliderOn.classList.remove('restaurants__slider');
+    }
+
+    if(promoSliderOn != null){
+      promoSliderOn.classList.remove('promo__slider');
+    }
+
+    
+  }
+
   $('.restaurants__slider').slick({
     dots: true,
     arrows: false,
     infinite: false,
   })
 
-
-  var header = $(".header");
-  var scrollChange = 50;
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= scrollChange) {
-      header.addClass('sticky');
-    } else {
-      header.removeClass("sticky");
-    }
-  });
-
+  $('.promo__slider').slick({
+    dots: true,
+    arrows: false,
+    infinite: false,
+  })
+ 
   var mixer = mixitup('.categories__list');
   mixer.filter('.burger');
 })

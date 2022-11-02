@@ -2,7 +2,9 @@
   <div class="container">
     <div class="catalog__inner">
       <h2 class="catalog__title title">Каталог продуктов</h2>
-      <form class="sorting-filters" action="#">
+      <div class="catalog__box">
+        <button class="catalog__btn"><span class="sr-only">Фильтры</span></button>
+        <form class="sorting-filters" action="#">
         <ul class="sorting-filters__items">
           <li class="sorting-filters__item">
             <select class="sorting-filters__select" name="sort-title">
@@ -18,10 +20,13 @@
           </li>
         </ul>
       </form>
+      </div>
+      
     </div>
 
     <div class="catalog__layout">
       <aside class="catalog-sidebar">
+        <button class="catalog-sidebar__btn"><span class="sr-only">закрыть фильтр</span></button>
         <ul class="catalog-sidebar__list">
           <li class="catalog-sidebar__item">
             <span class="catalog-sidebar__title">Категории</span>

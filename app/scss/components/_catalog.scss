@@ -5,11 +5,39 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 58px;
+
+    @include mq('tablet'){
+      display: block;
+    }
+
+    @include mq('phone'){
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title{
+    
+    @include mq('phone'){
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn{
+    display: none;
+    outline: 0;
+
+    @include mq('tablet'){
+      display: block;
+    }
   }
 
   &__layout {
     display: flex;
-    justify-content: space-between;
+
+
+    @include mq('tablet'){
+      justify-content: center;
+    }
   }
 
   &__list {
@@ -17,13 +45,49 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-bottom: 60px;
+
+
+    @include mq('desktop') {
+      grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    @include mq('tablet-2') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq('phone'){
+      grid-template-columns: repeat(2, 170px);
+      gap: 10px 5px;
+      margin-bottom: 30px;
+    }
+    
   }
 
-  &__item{
+  &__item {
 
-    // &:nth-child(-n + 6){
-    //   display: none;
-    // }
+
+    &:nth-child(-n + 6) {
+
+      @include mq('tablet-2') {
+        display: none;
+      }
+    }
+  }
+
+  &__box{
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn{
+    width: 47px;
+    height: 47px;
+    background-color: rgba($orange, 0.1);
+    margin-right: 10px;
+    background-image: url('../../images/filter-btn.svg');
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -38,6 +102,7 @@
 
     position: relative;
     transition: background-color 0.5s ease-in-out;
+    
 
     &:not(:last-child) {
       margin-right: 15px;
@@ -72,6 +137,7 @@
 
   &__select {
     padding: 15px 41px 15px 15px;
+    background-color: #fff;
     border: 1px solid $gray;
     border-radius: 3px;
     font-size: 14px;
@@ -93,6 +159,49 @@
   max-width: 270px;
   flex-basis: 270px;
   margin-right: 30px;
+  transition: transform 0.7s ease-in-out;
+
+  @include mq('tablet'){
+    position: absolute;
+    max-width: 320px;
+    flex-basis: 320px;
+    background-color: #fff;
+    margin-right: 0;
+    padding: 80px 50px 0 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 30;
+    transform: translateX(-200%);
+    overflow-y: scroll;
+  }
+
+  &--active{
+    transform: translateX(0);
+  }
+
+  &__btn{
+    width: 40px;
+    height: 40px;
+    background-color: rgba($orange, 0.1);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    outline: 0;
+    
+    &::before{
+      @include pseudo;
+      width: 18px;
+      height: 18px;
+      background-image: url('../../images/close.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 
   &__item {
     background-color: #fff;
@@ -309,7 +418,10 @@
     margin-right: 6px;
 
     &:nth-child(even){
-      display: none;
+
+      @include mq('phone'){
+        display: none;
+      }
     }
   }
 
@@ -334,17 +446,17 @@
       border-radius: 3px;
     }
 
-    &:hover{
+    &:hover {
       background-color: $orange;
       color: #fff;
     }
 
-    &:active{
+    &:active {
       box-shadow: inset 0px -1px 4px 2px rgba(0, 0, 0, 0.15);
       border-radius: 3px;
     }
 
-    &--active{
+    &--active {
       border-color: $darkBlue;
     }
   }
