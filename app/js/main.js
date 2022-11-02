@@ -71,6 +71,8 @@ $inputTo.on("input", function () {
     });
 });
 
+
+
   const burger = document.querySelector('.menu__btn');
   const closeMenu = document.querySelector('.side-menu__btn');
   const mobileMenu = document.querySelector('.side-menu');
@@ -80,15 +82,16 @@ $inputTo.on("input", function () {
   const sideBarOn = document.querySelector('.catalog__btn');
   const closeSideBar = document.querySelector('.catalog-sidebar__btn');
   const sideBar = document.querySelector('.catalog-sidebar');
+  const menuLink = document.querySelector('.menu__link');
 
   burger.addEventListener('click', () => {
     mobileMenu.classList.add('side-menu--active');
-    bodyLock.classList.add('lock');
+    //bodyLock.classList.add('lock');
   });
 
   closeMenu.addEventListener('click', () => {
     mobileMenu.classList.remove('side-menu--active');
-    bodyLock.classList.remove('lock');
+    //bodyLock.classList.remove('lock');
   });
 
   sideBarOn.addEventListener('click', () => {
@@ -100,6 +103,12 @@ $inputTo.on("input", function () {
     sideBar.classList.remove('catalog-sidebar--active');
     bodyLock.classList.remove('lock');
   });
+
+  $(".menu__link").click(function(e) {
+    e.preventDefault();
+    $(".menu__link").removeClass('menu__link--active');
+    $(this).addClass('menu__link--active');
+  })
 
   
 
