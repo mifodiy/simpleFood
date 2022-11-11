@@ -26,10 +26,23 @@
         right: -11px;
         transform: translateY(-50%);
       }
+
+      .breadcrumbs__link{
+
+        &:focus {
+          box-shadow: 0px 0px 0px 2px rgba($orange, 0.7);
+          border-radius: 5px;
+        }
+    
+        &:hover {
+          color: $orange;
+        }
+      }
     }
   }
 
   &__link{
     color: inherit;
+    outline: 0;
   }
 }
