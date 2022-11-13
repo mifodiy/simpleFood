@@ -11,6 +11,10 @@
   <link rel="manifest" href="images/favicon/site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -148,15 +152,14 @@
 
 
   <main class="main">
-   <div class="breadcrumbs">
+    <h1 class="sr-only">Каталог товаров</h1>
+    <div class="breadcrumbs">
   <div class="container">
     <ul class="breadcrumbs__list">
       <li class="breadcrumbs__item">
         <a class="breadcrumbs__link" href="#">Главная</a>
       </li>
-      <li class="breadcrumbs__item">
-        <span class="breadcrumbs__link">Каталог товаров</span>
-      </li>
+      <li class="breadcrumbs__item"><span class="breadcrumbs__link" href="#">Каталог товаров</span></li>
     </ul>
   </div>
 </div>
@@ -167,118 +170,132 @@
       <div class="catalog__box">
         <button class="catalog__btn"><span class="sr-only">Фильтры</span></button>
         <form class="sorting-filters" action="#">
-        <ul class="sorting-filters__items">
-          <li class="sorting-filters__item">
-            <select class="sorting-filters__select" name="sort-title">
-              <option class="sorting-filters__option" value="По названию">По названию</option>
-              <option class="sorting-filters__option" value="По цене">По цене</option>
-            </select>
-          </li>
-          <li class="sorting-filters__item">
-            <select class="sorting-filters__select" name="sort-size">
-              <option class="sorting-filters__option" value="по 12">по 12</option>
-              <option class="sorting-filters__option" value="по 6">по 6</option>
-            </select>
-          </li>
-        </ul>
-      </form>
+          <h3 class="sr-only">Сортировка</h3>
+          <ul class="sorting-filters__items">
+
+            <li class="sorting-filters__item">
+              <label class="sorting-filters__label">
+                <select class="sorting-filters__select" name="sort-title">
+                  <option value="По названию">По названию</option>
+                  <option value="По цене">По цене</option>
+                </select>
+              </label>
+            </li>
+
+            <li class="sorting-filters__item">
+              <label class="sorting-filters__label">
+                <select class="sorting-filters__select" name="sort-size">
+                  <option value="по 12">по 12</option>
+                  <option value="по 6">по 6</option>
+                </select>
+              </label>
+            </li>
+
+          </ul>
+        </form>
       </div>
-      
+
     </div>
 
     <div class="catalog__layout">
-      <aside class="catalog-sidebar">
+      <section class="catalog-sidebar">
         <button class="catalog-sidebar__btn"><span class="sr-only">закрыть фильтр</span></button>
-        <ul class="catalog-sidebar__list">
-          <li class="catalog-sidebar__item">
-            <span class="catalog-sidebar__title">Категории</span>
-            <ul class="category">
-              <li class="category__item">
-                <a class="category__link" href="#">
-                  Бургеры
-                </a>
+
+        <article class="category catalog-sidebar__item">
+          <h3 class="category__title catalog-sidebar__title">Категории</h3>
+          <ul class="category__list">
+
+            <li class="category__item">
+              <a class="category__link" href="#">
+                Бургеры
+              </a>
+            </li>
+
+            <li class="category__item">
+              <a class="category__link" href="#">
+                Пицца
+              </a>
+            </li>
+
+            <li class="category__item">
+              <a class="category__link" href="#">
+                Сендвичи
+              </a>
+            </li>
+
+            <li class="category__item">
+              <a class="category__link" href="#">
+                Азиатская кухня
+              </a>
+            </li>
+
+            <li class="category__item">
+              <a class="category__link" href="#">
+                Сеты
+              </a>
+            </li>
+
+            <li class="category__item">
+              <a class="category__link" href="#">
+                Европейская кухня
+              </a>
+            </li>
+
+            <li class="category__item">
+              <a class="category__link" href="#">
+                Напитки
+              </a>
+            </li>
+
+            <li class="category__item">
+              <a class="category__link" href="#">
+                Алкоголь
+              </a>
+            </li>
+
+          </ul>
+
+        </article>
+
+        <article class="offer catalog-sidebar__item">
+          <h3 class="offer__title catalog-sidebar__title">Предложения</h3>
+          <form class="offer__form" action="#">
+            <ul class="offer__list">
+              <li class="offer__item">
+                <input class="offer__input" id="offer-sale" type="checkbox" name="offer-sale">
+                <label class="offer__label" for="offer-sale">Со скидкой</label>
               </li>
-              <li class="category__item">
-                <a class="category__link" href="#">
-                  Пицца
-                </a>
+
+              <li class="offer__item">
+                <input class="offer__input" id="offer-new" type="checkbox" name="offer-new">
+                <label class="offer__label" for="offer-new">Новинка</label>
               </li>
-              <li class="category__item">
-                <a class="category__link" href="#">
-                  Сендвичи
-                </a>
-              </li>
-              <li class="category__item">
-                <a class="category__link" href="#">
-                  Азиатская кухня
-                </a>
-              </li>
-              <li class="category__item">
-                <a class="category__link" href="#">
-                  Сеты
-                </a>
-              </li>
-              <li class="category__item">
-                <a class="category__link" href="#">
-                  Европейская кухня
-                </a>
-              </li>
-              <li class="category__item">
-                <a class="category__link" href="#">
-                  Напитки
-                </a>
-              </li>
-              <li class="category__item">
-                <a class="category__link" href="#">
-                  Алкоголь
-                </a>
+
+              <li class="offer__item">
+                <input class="offer__input" id="offer-hit" type="checkbox" name="offer-hit">
+                <label class="offer__label" for="offer-hit">Хит</label>
               </li>
             </ul>
-          </li>
-          <li class="catalog-sidebar__item">
-            <span class="catalog-sidebar__title">Предложения</span>
-            <form class="offer" action="#">
-              <label class="offer__label">
-                <div class="offer__box">
-                  <input class="offer__input" type="checkbox">
-                  <span class="offer__checkbox"></span>
-                </div>
-                <span class="offer__text">Со скидкой</span>
-              </label>
-              <label class="offer__label">
-                <div class="offer__box">
-                  <input class="offer__input" type="checkbox">
-                  <span class="offer__checkbox"></span>
-                </div>
-                <span class="offer__text">Новинка</span>
-              </label>
-              <label class="offer__label">
-                <div class="offer__box">
-                  <input class="offer__input" type="checkbox">
-                  <span class="offer__checkbox"></span>
-                </div>
-                <span class="offer__text">Хит</span>
-              </label>
-            </form>
-          </li>
-          <li class="catalog-sidebar__item">
-            <span class="catalog-sidebar__title">Цена</span>
-            <div class="price">
-              <div class="price__box">
-                <label class="price__label price__label--from">
-                  <input type="text" class="price__input--from price__input" value="0" />
-                </label>
-                <label class="price__label price__label--to">
-                  <input type="text" class="price__input--to price__input" value="0" />
-                </label>
-              </div>
 
-              <input type="text" class="price__range-slider" value="" />
-            </div>
-          </li>
+          </form>
+        </article>
 
-        </ul>
-      </aside>
+        <article class="price catalog-sidebar__item">
+          <h3 class="price__title catalog-sidebar__title">Цена</h3>
+          <div class="price__box">
+            <label class="price__label price__label--from">
+              <input type="text" class="price__input--from price__input" value="0" />
+            </label>
+            <label class="price__label price__label--to">
+              <input type="text" class="price__input--to price__input" value="0" />
+            </label>
+            <input type="text" class="price__range-slider" value="" />
+          </div>
+
+        </article>
+
+      </section>
+
       <div class="catalog__content">
         <ul class="catalog__list">
           <li class="catalog__item">
@@ -451,7 +468,7 @@
           </li>
         </ul>
         <div class="pagination">
-          <a class="pagination__arrow pagination__arrow--prev" href="#"></a>
+          <a class="pagination__arrow pagination__arrow--prev pagination__arrow--disabled" href="#"></a>
           <ul class="pagination__list">
             <li class="pagination__item">
               <a class="pagination__link pagination__link--active" href="#">
@@ -684,6 +701,8 @@
 </footer>
 
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 

@@ -1,6 +1,7 @@
 .product-card {
-	width: 210px;
+	max-width: 210px;
 	height: 100%;
+	min-height: 299px;
 	padding: 20px 15px;
 	display: flex;
 	flex-direction: column;
@@ -11,8 +12,8 @@
 	border-radius: 5px;
 	transition: box-shadow 0.5s ease-in-out;
 
-	@include mq('phone'){
-		width: 170px;
+	@include mq('phone') {
+		max-width: 170px;
 		min-height: 299px;
 	}
 
