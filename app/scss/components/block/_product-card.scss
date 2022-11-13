@@ -16,7 +16,7 @@
 
 
 	@include mq('phone'){
-		width: 170px;
+		max-width: 170px;
 		min-height: 299px;
 	}
 
