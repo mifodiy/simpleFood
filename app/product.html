@@ -213,30 +213,30 @@
   <div class="product__tabs product-tabs">
     <div class="container">
       <div class="product-tabs__inner">
-        <input class="product-tabs__input" id="one" name="group" type="radio" checked>
-        <input class="product-tabs__input" id="two" name="group" type="radio">
-        <input class="product-tabs__input" id="three" name="group" type="radio">
-  
+        <input class="product-tabs__input product-tabs__input--descr" id="product-descr" name="product-tabs" type="radio" checked>
+        <input class="product-tabs__input product-tabs__input--feature" id="product-feature" name="product-tabs" type="radio">
+        <input class="product-tabs__input product-tabs__input--review" id="product-review" name="product-tabs" type="radio">
+
         <ul class="product-tabs__list">
           <li class="product-tabs__part">
             <h2 class="product-tabs__title">
-              <label class="product-tabs__label" id="one-tab" for="one">Описание</label>
+              <label class="product-tabs__label product-tabs__label--descr" id="product-descr-tab" for="product-descr">Описание</label>
             </h2>
           </li>
-  
+
           <li class="product-tabs__part">
             <h2 class="product-tabs__title">
-              <label class="product-tabs__label" id="two-tab" for="two">Характеристики</label>
+              <label class="product-tabs__label product-tabs__label--feature" id="product-feature-tab" for="product-feature">Характеристики</label>
             </h2>
           </li>
-  
+
           <li class="product-tabs__part">
             <h2 class="product-tabs__title">
-              <label class="product-tabs__label" id="three-tab" for="three">Отзывы (2)</label>
+              <label class="product-tabs__label product-tabs__label--review" id="product-review-tab" for="product-review">Отзывы (2)</label>
             </h2>
           </li>
         </ul>
-  
+
         <ul class="product-tabs__items">
           <li class="product-tabs__item product-tabs__item--descr">
             <article class="descr-prod">
@@ -260,14 +260,15 @@
                   ккал</span>
               </li>
               <li class="feature-prod__item">
-                <span class="feature-prod__descr">Срок хранения: </span><span class="feature-prod__value">до 3 дней</span>
+                <span class="feature-prod__descr">Срок хранения: </span><span class="feature-prod__value">до 3
+                  дней</span>
               </li>
             </ul>
           </li>
           <li class="product-tabs__item product-tabs__item--review">
             <article class="review-prod">
               <h3 class="review-prod__title">Мнения наших клиентов</h3>
-  
+
               <ul class="review-prod__list">
                 <li class="review-prod__item">
                   <div class="review-prod__info">
@@ -283,7 +284,7 @@
                     <p>Доставили быстро. Товар свежий и очень вкусный, буду пробовать еще!))</p>
                   </div>
                 </li>
-  
+
                 <li class="review-prod__item">
                   <div class="review-prod__info">
                     <img class="review-prod__avatar" src="images/prod-avatar.jpg" alt="аватар коментирующего" width="70"
@@ -300,7 +301,7 @@
                   </div>
                 </li>
               </ul>
-  
+
               <form class="review-prod__form review-form" action="#">
                 <h3 class="review-form__title">Оставить отзыв</h3>
                 <span class="review-form__label review-form__label--rating">Ваша оценка * <div
@@ -323,9 +324,9 @@
                         placeholder="youremail@mail.com" required></input>
                     </label>
                   </div>
-  
+
                 </div>
-  
+
                 <input class="review-form__input review-form__input--checkbox" id="review-confirm" name="review-confirm"
                   type="checkbox"></input>
                 <label class="review-form__label review-form__label--checkbox" for="review-confirm">
@@ -333,13 +334,13 @@
                 </label>
                 <button class="review-form__btn btn">Оставить отзыв</button>
               </form>
-  
+
             </article>
           </li>
         </ul>
       </div>
     </div>
-    
+
 
   </div>
 

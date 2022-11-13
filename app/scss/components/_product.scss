@@ -17,7 +17,6 @@
 
     @include mq('tablet-2') {
       flex-direction: column;
-
     }
 
     @include mq('phone') {
@@ -33,8 +32,6 @@
   .swiper {
     margin-right: 30px;
     max-width: 610px;
-
-
     padding: 75px 105px 75px 105px;
     background-color: #fff;
 
@@ -70,7 +67,6 @@
 
   .swiper-button-next::after {
     background-image: url("../../images/popup-arrow-next.svg");
-
   }
 
   .swiper-button-next {
@@ -118,7 +114,6 @@
   &__content {
     max-width: 531px;
     flex: none;
-
   }
 
   &__title {
@@ -173,8 +168,6 @@
     position: relative;
     letter-spacing: 0.03px;
 
-
-
     &:hover::after,
     &:focus::after {
       background-color: $orange;
@@ -193,7 +186,6 @@
       background-color: #fff;
       transform: translateY(-50%);
       transition: background-color 0.5s ease-in-out;
-
     }
   }
 
@@ -211,7 +203,6 @@
     background-color: rgba($orange, 0.1);
     color: $darkBlue;
     border-radius: 3px;
-
   }
 
   .jq-number__spin {
@@ -335,8 +326,6 @@
 
   &__list {
     display: flex;
-    //flex-basis: 690px;
-
     margin-bottom: 30px;
     font-size: 24px;
     color: $darkBlue;
@@ -399,15 +388,15 @@
     position: absolute;
   }
 
-  #one:checked~.product-tabs__items .product-tabs__item--descr,
-  #two:checked~.product-tabs__items .product-tabs__item--feature,
-  #three:checked~.product-tabs__items .product-tabs__item--review {
+  .product-tabs__input--descr:checked~.product-tabs__items .product-tabs__item--descr,
+  .product-tabs__input--feature:checked~.product-tabs__items .product-tabs__item--feature,
+  .product-tabs__input--review:checked~.product-tabs__items .product-tabs__item--review {
     display: block;
   }
 
-  #one:checked~.product-tabs__list #one-tab,
-  #two:checked~.product-tabs__list #two-tab,
-  #three:checked~.product-tabs__list #three-tab {
+  .product-tabs__input--descr:checked~.product-tabs__list .product-tabs__label--descr,
+  .product-tabs__input--feature:checked~.product-tabs__list .product-tabs__label--feature,
+  .product-tabs__input--review:checked~.product-tabs__list .product-tabs__label--review {
     color: $orange;
   }
 

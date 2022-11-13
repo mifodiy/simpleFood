@@ -14,7 +14,6 @@ $(function () {
 
   const recentSwiper = new Swiper('.recent__slider', {
     slidesPerView: 'auto',
-    //spaceBetween: 29,
     slidesPerGroup: 3,
   
     navigation: {
@@ -34,14 +33,8 @@ $(function () {
       },
       769: {
         spaceBetween:29,
-        
       },
-      993: {
-        
-      },
-      1200: {
-        
-      },
+      
     }
   
   });
