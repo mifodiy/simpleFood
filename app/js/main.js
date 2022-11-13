@@ -1,4 +1,37 @@
+
 $(function () {
+
+  const productSwiper = new Swiper('.product__slider', {
+    slidesPerView: 1,
+    spaceBetween: 100,
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      559: {
+        
+      }
+    }
+  
+  });
+
+  const recentSwiper = new Swiper('.recent__slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 29,
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      559: {
+        
+      }
+    }
+  
+  });
 
 
 Fancybox.bind('[data-fancybox="images"]', {
@@ -103,17 +136,17 @@ $('.product__input').styler({
   
 })
 
-   var header = $(".header");
-  var scrollChange = 50;
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
+  //  var header = $(".header");
+  // var scrollChange = 50;
+  // $(window).scroll(function () {
+  //   var scroll = $(window).scrollTop();
 
-    if (scroll >= scrollChange) {
-      header.addClass('sticky');
-    } else {
-      header.removeClass("sticky");
-    }
-  });
+  //   if (scroll >= scrollChange) {
+  //     header.addClass('sticky');
+  //   } else {
+  //     header.removeClass("sticky");
+  //   }
+  // });
 
   var $range = $(".price__range-slider"),
     $inputFrom = $(".price__input--from"),

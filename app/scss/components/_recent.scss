@@ -1,43 +1,39 @@
 .recent {
 
-  &__title{
-    margin-bottom: 56px;
+  &__title {
+    margin-bottom: -42px;
   }
 
-  &__list{
+  &__list {
     position: relative;
   }
 
-  .slick-list{
-    padding: 3px 0 3px 2px;
-    position: relative;
-    height: 304px;
+  &__slider {
+    padding-left: 1px;
+    padding-bottom: 1px;
   }
 
-  .slick-slide {
+  &__slide {
     width: 210px !important;
-    &:not(:last-child){
-      margin-right: 30px;
-    }
+    padding-top: 100px;
+
   }
 
+  .product-card {
+    min-height: 260px;
+  }
 
-  .slick-arrow {
-    position: absolute;
+  .swiper-button-next,
+  .swiper-button-prev {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: transparent;
-    top: -103px;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 3px solid $gray;
+    top: 22px;
+    right: 0;
+    transform: translateY(0);
     transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
     outline: 0;
-    z-index: 5;
-
 
     &:focus {
       box-shadow: 0px 0px 0px 2px rgba($orange, 0.7);
@@ -47,7 +43,7 @@
       background-color: rgba($orange, 0.1);
       border-color: #FFAE94;
 
-      .icon-arrow {
+      &::after {
         background-color: #FFAE94;
       }
     }
@@ -56,34 +52,44 @@
       background-color: rgba($orange, 0.1);
       border: none;
 
-      .icon-arrow {
+      &::after  {
         background-color: $orange;
       }
     }
 
-    &.slick-disabled {
-      border-color: $gray;
-
-      .icon-arrow {
-        background-color: $gray;
-      }
-    }
   }
 
-  .slick-prev {
-    transform: translateX(-62px);
-
+  .swiper-button-prev {
+    right: 62px;
+    left: auto;
   }
 
-  .icon-arrow {
-    width: 18px;
-    height: 18px;
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    mask-position: center;
-    background-color: $gray;
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: "";
+    position: absolute;
     display: block;
+    mask-repeat: no-repeat;
+    width: 11px;
+    height: 19px;
+    background-color: $gray;
+    mask-size: cover;
+    mask-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: background-color 0.5s ease-in-out;
+
   }
-  
+
+  .swiper-button-prev::after {
+    mask-image: url("../images/sprite.svg#left-arrow");
+
+  }
+
+  .swiper-button-next::after {
+    mask-image: url("../images/sprite.svg#right-arrow");
+
+  }
+
 }
