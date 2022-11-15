@@ -142,6 +142,33 @@ $('.product__input').styler({
   
 })
 
+$('.restaurants__slider').slick({
+  dots: true,
+  arrows: false,
+  infinite: false,
+})
+
+$('.promo__slider').slick({
+  dots: true,
+  arrows: false,
+  infinite: false,
+})
+
+$('.reviews__slider').slick({
+  dots: true,
+  prevArrow: `<button type="button" class="slick-prev"><span class="icon-arrow" style="-webkit-mask-image: url('../images/sprite.svg#left-arrow');"></span></button>`,
+  nextArrow: `<button type="button" class="slick-next"><span class="icon-arrow" style="-webkit-mask-image: url('../images/sprite.svg#right-arrow');"></span></button>`,
+  infinite: false,
+  responsive: [
+    {
+      breakpoint: 561,
+      settings: {
+        dots: false,
+      }
+    },
+  ]
+})
+
    var header = $(".header");
   var scrollChange = 50;
   $(window).scroll(function () {
@@ -213,7 +240,11 @@ $inputTo.on("input", function () {
     });
 });
 
-
+$(".menu__link").click(function(e) {
+   e.preventDefault();
+   $(".menu__link").removeClass('menu__link--active');
+   $(this).addClass('menu__link--active');
+ })
 
   const burger = document.querySelector('.menu__btn');
   const closeMenu = document.querySelector('.side-menu__btn');
@@ -246,28 +277,8 @@ $inputTo.on("input", function () {
     bodyLock.classList.remove('lock');
   });
 
-  $(".menu__link").click(function(e) {
-    e.preventDefault();
-    $(".menu__link").removeClass('menu__link--active');
-    $(this).addClass('menu__link--active');
-  })
-
   
 
-  $('.reviews__slider').slick({
-    dots: true,
-    prevArrow: `<button type="button" class="slick-prev"><span class="icon-arrow" style="-webkit-mask-image: url('../images/sprite.svg#left-arrow');"></span></button>`,
-    nextArrow: `<button type="button" class="slick-next"><span class="icon-arrow" style="-webkit-mask-image: url('../images/sprite.svg#right-arrow');"></span></button>`,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 561,
-        settings: {
-          dots: false,
-        }
-      },
-    ]
-  })
 
   
   if (window.matchMedia("(max-width: 767px)").matches) {
@@ -293,17 +304,7 @@ $inputTo.on("input", function () {
     
   }
 
-  $('.restaurants__slider').slick({
-    dots: true,
-    arrows: false,
-    infinite: false,
-  })
-
-  $('.promo__slider').slick({
-    dots: true,
-    arrows: false,
-    infinite: false,
-  })
+  
  
   var mixer = mixitup('.categories__list');
   mixer.filter('.burger');
