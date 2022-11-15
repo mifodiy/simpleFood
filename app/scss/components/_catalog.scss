@@ -247,7 +247,7 @@
   padding: 15px 0 25px 0;
 
   &__list{
-    padding-left: 15px;
+    padding: 0 15px;
   }
 
   &__item {
@@ -261,6 +261,7 @@
 
   &__link {
     outline: 0;
+    word-break: break-all;
     transition: box-shadow 0.5s ease-in-out, color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
 
     &:focus {

@@ -668,11 +668,56 @@
     top: 54px;
     right: 96px;
     bottom: 54px;
+
+    @include mq('desktop'){
+      left: 54px;
+    top: 96px;
+    right: 54px;
+    bottom: 96px;
+    }
+
+    @include mq('tablet-2'){
+      left: 54px;
+    top: 150px;
+    right: 54px;
+    bottom: 150px;
+    }
+
+    @include mq('tablet'){
+      display: none;
+    }
   }
 }
 
 .fancybox__carousel {
   margin-bottom: 0;
+}
+
+.fancybox__slide{
+
+  @include mq('desktop'){
+    padding: 70px 150px;
+  }
+}
+
+.fancybox__content{
+  width: 39vw !important;
+  height: 39vw !important;
+
+  @include mq('phone'){
+    width: 350px !important;
+    height: 350px !important;
+  }
+
+  & .fancybox__image{
+    width: 39vw;
+    height: 39vw;
+
+    @include mq('phone'){
+      width: 350px;
+      height: 350px;
+    }
+  }
 }
 
 .carousel__button svg {
@@ -699,6 +744,10 @@
 .carousel__dots {
   position: absolute;
   top: 85.5vh;
+
+  @include mq('tablet'){
+    top: 62vh;
+  }
 }
 
 .carousel__dots .carousel__dot {
@@ -726,9 +775,21 @@
 
 .carousel__button.is-close {
   top: 8.5vh;
-  right: 7vw;
+  right: 9vw;
+
+  @include mq('desktop'){
+    top: 50px;
+    right: 50px;
+  }
+
 }
 
 .carousel__button.is-close svg {
   stroke: rgba(0, 0, 0, 0.15);
+
+  @include mq('desktop'){
+    stroke: #505050;
+    fill:#505050;
+    stroke-width: 2px;
+  }
 }

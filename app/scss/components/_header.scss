@@ -45,6 +45,7 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 52px 0 auto;
     font-size: 18px;
     line-height: 1.2;
@@ -54,9 +55,16 @@
     }
   }
 
-  &__item:not(:last-child) {
-    margin-right: 45px;
+  
+  &__item{
+
+    &:not(:last-child) {
+      margin-right: 45px;
+  
+    }
   }
+  
+  
 
   &__link {
     outline: 0;
@@ -205,14 +213,15 @@
 
   &__num {
     position: absolute;
-    width: 14px;
+    min-width: 14px;
+    padding: 2px;
     height: 14px;
     border-radius: 50%;
     background-color: $orange;
     color: #fff;
     font-size: 10px;
     text-align: center;
-    line-height: 14px;
+    line-height: 1;
     top: 7px;
     right: 7px;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
